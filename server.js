@@ -78,6 +78,8 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     async allMovies() {
+      //error : "message": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      //occured 403
       const response = await fetch(
         "https://yts.torrentbay.st/api/v2/list_movies.json",
         {
